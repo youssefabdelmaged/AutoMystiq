@@ -1,0 +1,872 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", "sans-serif";
+}
+
+body {
+  background-color: black;
+  background-image: url(photos/Nissan-GT-R-R35-white-car-side-view_1366x768.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: "Lato", sans-serif;
+}
+
+span {
+  color: orange;
+}
+
+h2 {
+  text-align: center;
+  color: white;
+  font-size: 30px;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  padding: 0 2rem;
+  background-color: rgba(0, 0, 0, 50%);
+  width: 100%;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+.navbar .links a.active {
+  color: orange;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+}
+
+:root {
+  scroll-behavior: smooth;
+}
+
+.sctop {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: orange
+    url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3Cpath fill='currentColor' d='M352 352c-8.188 0-16.38-3.125-22.62-9.375L192 205.3l-137.4 137.4c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25C368.4 348.9 360.2 352 352 352z'%3E%3C/path%3E%3C/svg%3E")
+    center no-repeat;
+  opacity: 0.2;
+}
+.sctop:hover {
+  opacity: 0.8;
+}
+
+/* logo and container and links and navbar */
+
+header .logo .sizelogo {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+}
+
+.container div :hover {
+  color: orange;
+}
+
+header .navbar .links a {
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+}
+
+header .navbar .links :hover {
+  color: orange;
+}
+
+.navbar {
+  width: 100%;
+  height: 60px;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+.navbar .links {
+  display: flex;
+  gap: 3rem;
+}
+
+.navbar .toggle_btn {
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.action_btn {
+  background-color: orange;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: scale 0.2 ease;
+}
+
+.action_btn:hover {
+  scale: 1.1;
+}
+
+/* DROPDOWN MENU */
+
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  width: 300px;
+  height: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 0px 0px 10px 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu .action_btn {
+  width: 80%;
+  height: auto;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.dropdown_menu.open {
+  height: 220px;
+}
+
+.dropdown_menu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+/* words and 2 Buttons (a)*/
+
+p {
+  color: white;
+  width: 90%;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+.search {
+  color: rgb(206, 206, 206);
+  width: 90%;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  font-size: 40px;
+}
+.welcome {
+  background-color: rgba(0, 0, 0, 0.26);
+  color: white;
+  width: 90%;
+  margin: auto;
+  padding: 50px;
+  font-size: 80px;
+}
+
+.centerp {
+  background-color: rgba(0, 0, 0, 0.26);
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  font-size: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  margin-inline: 20px;
+  width: 25%;
+  padding: 15px;
+  background-color: orange;
+  border: solid;
+  border-radius: 20px;
+  opacity: 60%;
+  transition: scale 0.2 ease;
+}
+
+.btn:hover {
+  opacity: 100%;
+  color: rgb(255, 255, 255);
+  scale: 1.05;
+}
+
+/* cards */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+  background-color: rgba(0, 0, 0, 0.26);
+  color: white;
+  width: 90%;
+  margin: auto;
+  padding: 30px;
+  flex-wrap: wrap;
+}
+
+.container div {
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+}
+
+.container div :hover {
+  scale: 1.03;
+}
+
+.container div img {
+  width: 200px;
+  height: 200px;
+  border-radius: 30px;
+  transition: ease-in;
+}
+
+figcaption {
+  font-size: 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+li {
+  list-style: none;
+}
+
+/* About page */
+
+.story {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 30px;
+}
+
+.concept {
+  font-size: 20px;
+}
+
+.sponsors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  margin: auto;
+  padding: 50px;
+  flex-wrap: wrap;
+  transition: scale 0.2 ease;
+}
+
+.sponsors div img {
+  width: 350px;
+  height: 170px;
+}
+
+.sponsors div :hover {
+  scale: 1.03;
+}
+
+div.map {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+table {
+  color: white;
+  margin: auto;
+  font-size: 30px;
+  padding: 20px;
+}
+
+.intro {
+  color: white;
+  padding-top: 20px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Services page */
+
+.service {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.26);
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+
+/* .service img {
+  border-radius: 50px;
+  margin: auto;
+  height: 100%;
+} */
+
+.calls {
+  color: white;
+  font-size: 30px;
+  background-color: black;
+  padding: 10px 8px;
+}
+
+.calls strong {
+  color: red;
+}
+
+.servphoto {
+  width: 700px;
+  height: 300px;
+  overflow: hidden;
+  color: white;
+  margin: auto;
+  padding: 10px 15px;
+  font-size: 30px;
+}
+
+.servComments {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.26);
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  padding: 20px;
+  width: 90%;
+  margin: auto;
+}
+
+.testimonials {
+  color: #ffffff;
+  text-align: center;
+}
+
+.col :hover {
+  scale: 1.03;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.col {
+  flex: 30%;
+  box-sizing: border-box;
+  padding: 15px;
+}
+
+.testimonial {
+  background: rgba(255, 255, 255, 0.26);
+  padding: 10px;
+}
+.testimonial img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.name {
+  font-size: 15px;
+  text-transform: uppercase;
+  margin: 20px;
+}
+.stars {
+  color: yellow;
+}
+
+.servComments textarea,
+textarea {
+  width: 50%;
+  padding: 14px;
+  font-size: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  resize: none;
+  height: 240px;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.servComments .submit {
+  font-size: 16px;
+  background: orange;
+  color: white;
+  width: 160px;
+  transition: all 0.45s ease-out;
+  padding: 10px;
+  background-color: orange;
+  border-radius: 20px;
+  border: none;
+}
+
+.servComments .submit:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* Contact page */
+
+.contact {
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.692);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 30px;
+}
+.contact-text h4 {
+  margin: 18px 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+}
+.contact-text h2 {
+  text-align: center;
+  font-size: 50px;
+  color: white;
+}
+.contact-text p {
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.contact-form form input,
+form textarea {
+  width: 100%;
+  padding: 14px;
+  background-color: rgba(255, 255, 255, 0.808);
+  border: none;
+  outline: none;
+  font-size: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.contact-form .submit {
+  display: inline-block;
+  font-size: 16px;
+  background-color: orange;
+  color: white;
+  width: 160px;
+  transition: all 0.45s ease;
+}
+
+.contact-form .submit:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.uploadlabel {
+  display: inline-block;
+  background-color: orange;
+  color: white;
+  padding: 6px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-size: 14px;
+  width: 100px;
+  height: 25px;
+  margin-right: 50px;
+  text-align: center;
+}
+
+/* login and sign up page */
+
+.sectionlog {
+  padding: 40px;
+  gap: 100px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+}
+.form-boxlog {
+  width: 360px;
+  height: 450px;
+  background-color: rgba(0, 0, 0, 0.404);
+  border: 2px solid rgba(95, 95, 95, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  gap: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputbox {
+  position: relative;
+  margin: 25px 0;
+  width: 310px;
+  border-bottom: 2px solid #fff;
+}
+.inputbox label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 1em;
+  pointer-events: none;
+  transition: 0.3s;
+}
+input:focus ~ label,
+input:valid ~ label {
+  top: -3px;
+}
+
+.inputbox input {
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  padding: 0 35px 0 5px;
+  color: #fff;
+}
+
+.forgetL {
+  margin: -15px 0 15px;
+  font-size: 0.9em;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  float: right;
+}
+
+.forgetR {
+  margin: -15px 0 15px;
+  font-size: 0.9em;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  float: left;
+}
+
+.forget label a:hover {
+  text-decoration: underline;
+}
+button {
+  width: 100%;
+  height: 40px;
+  border-radius: 40px;
+  background: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+/* footer */
+
+.footer {
+  font-size: small;
+  background-color: rgba(128, 128, 128, 0.719);
+  color: white;
+  padding: 40px;
+  height: 150px;
+}
+.footer .leftfoot {
+  float: left;
+  font-size: 10px;
+}
+.footer .rightfoot {
+  float: right;
+  font-size: 10px;
+}
+
+.fa {
+  padding: 18px;
+  font-size: 18px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px;
+  border-radius: 50%;
+}
+
+.fa-facebook {
+  width: 50px;
+  background: #3b5998;
+  color: white;
+}
+
+.fa-twitter {
+  width: 50px;
+  background: #55acee;
+  color: white;
+}
+
+.fa-instagram {
+  width: 50px;
+  background: #125688;
+  color: white;
+}
+
+/* newcars page */
+
+.newcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+  background-color: rgba(0, 0, 0, 0.26);
+  color: white;
+  width: 90%;
+  margin: auto;
+  padding: 30px;
+  flex-wrap: wrap;
+}
+
+.newcontainer div {
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+}
+
+.newcontainer div :hover {
+  scale: 1.03;
+}
+
+.newcontainer div img {
+  width: 200px;
+  height: 200px;
+  border-radius: 30px;
+  transition: ease-out;
+}
+
+/* Usedcars page */
+
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  max-width: 1250px;
+  margin: 10px auto;
+  padding: 20px;
+  gap: 20px;
+}
+
+.card-list .card-item {
+  background-color: rgba(0, 0, 0, 0.363);
+  padding: 26px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  border: 2px solid transparent;
+  transition: border 0.5s ease;
+  margin: 30px;
+  transition: scale 0.2 ease;
+}
+
+.card-list .card-item:hover {
+  border: 2px solid black;
+  scale: 1.09;
+}
+
+.card-list .card-item img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.card-list span {
+  display: inline-block;
+  background: #000000;
+  margin-top: 32px;
+  padding: 8px 15px;
+  font-size: 0.75rem;
+  border-radius: 50px;
+  font-weight: 600;
+}
+
+.card-list .carc {
+  background-color: rgba(0, 0, 0, 0.26);
+  color: rgb(255, 255, 255);
+  font-size: 22px;
+  text-align: center;
+}
+
+.card-item h3 {
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  margin-top: 30px;
+  font-weight: 700;
+}
+
+.card-item .arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  color: black;
+  border: 1px solid black;
+  border-radius: 50%;
+  margin-top: 40px;
+  transition: 0.2s ease;
+}
+
+.card-list .card-item:hover .arrow {
+  background: black;
+  color: white;
+}
+
+/* Buy Used cars slider */
+
+.backgroundused {
+  width: 90%;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.26);
+}
+
+.slider-container {
+  width: 40%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 3s ease-in-out;
+}
+
+.slide {
+  flex: 0 0 100%; /* Make each slide take up the full width */
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+.desc {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}
+
+.usedtitle {
+  font-weight: 600;
+  font-size: 40px;
+  text-align: center;
+  color: white;
+}
+
+/* resposive for devices */
+
+@media (max-width: 1000px) {
+  .navbar .links,
+  .navbar .action_btn {
+    display: none;
+  }
+  .navbar .toggle_btn {
+    display: block;
+  }
+  .dropdown_menu {
+    display: block;
+  }
+  .footer {
+    height: 180px;
+  }
+  table,
+  .usedtitle {
+    font-size: 20px;
+  }
+  .servphoto {
+    width: 340px;
+  }
+
+  .col {
+    flex: 100%;
+    max-width: 50%;
+  }
+  section.contact,
+  .sectionlog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .dropdown_menu {
+    left: 2rem;
+    width: initial;
+  }
+  .container {
+    display: flex wrap;
+  }
+  .welcome {
+    font-size: 40px;
+  }
+  .footer {
+    height: 200px;
+  }
+  table,
+  .usedtitle {
+    font-size: 20px;
+  }
+  .concept {
+    font-size: 15px;
+  }
+  .service {
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+  .servphoto {
+    height: 190px;
+  }
+  .service img {
+    border-radius: 0;
+  }
+  .col {
+    flex: 100%;
+    max-width: 100%;
+  }
+  .contact,
+  .sectionlog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
