@@ -493,18 +493,15 @@ form textarea {
 }
 
 .uploadlabel {
-  display: inline-block;
   background-color: orange;
   color: white;
-  padding: 6px;
-  border-radius: 5px;
+  width: 160px;
+  transition: all 0.45s ease;
+  font-size: 16px;
+  padding: 14px;
+  border-radius: 9px;
+  margin-right: 20px;
   cursor: pointer;
-  margin-top: 1rem;
-  font-size: 14px;
-  width: 100px;
-  height: 25px;
-  margin-right: 50px;
-  text-align: center;
 }
 
 /* login and sign up page */
